@@ -1,35 +1,52 @@
-I reviewed your grooming review for CPBSTE-29014 – Connected Commercial Accounts landing page. The points are clear and appropriate for a grooming discussion. Before you copy and paste them into Jira or Confluence, I recommend tightening the wording and separating confirmed requirements from questions that still need answers.
-Here is the polished version, ready to use.
+1. Main Requirement: Split the Prototype into Two Separate Pages
+The team reviewed Rahul's existing prototype and requested that the current combined view be split into two completely separate pages.
 
-Grooming Review – CPBSTE-29014: Connected Commercial Accounts Landing Page
+Page 1: Existing Client
+- Display only the existing client dashboard.
+- Keep the existing client functionality and layout.
+- Include the required blue banner.
+- This should match the existing client demo shown yesterday.
+Page 2: New Client
+- Display only the new client landing page.
+- Keep the new client functionality separate from the existing client page.
+- Use a separate localhost URL to demonstrate this page independently.
+2. Navigation Requirements
+- Existing client and new client must be displayed on separate pages.
+- Both pages must not appear together on the same screen.
+- Users should not be able to navigate directly from one page to the other through the prototype's UI.
+- Each page should be accessible independently through its own localhost URL.
+3. Git and Deployment Process
+The team agreed that the changes can be pushed to the main branch after completion, following the agreed review and pipeline process.
 
-The story is generally clear. However, a few points require clarification before it can move out of Grooming and into estimation.
+The expected steps are:
+1. Rahul separates the existing client and new client pages.
+2. Complete the required UI changes.
+3. Run the pipeline.
+4. Ravi and the other designated reviewer review the changes.
+5. After review and approval, push the changes to the main branch.
+4. Additional Discussion
+- The team confirmed that the new client landing page is already being developed.
+- The team had no further major comments on the proposed changes.
+- The new relationship banking/new client landing page work is progressing.
+✅ Action Items for Rahul
+#	Task	Expected Result
+1	Separate the existing client page	Only the existing client dashboard is displayed.
+2	Separate the new client page	Only the new client landing page is displayed.
+3	Add the blue banner	The required banner is present in the prototype.
+4	Configure separate localhost URLs	Each page can be demonstrated independently.
+5	Remove navigation between the two pages	Neither page provides a direct route to the other through the UI.
+6	Run the pipeline	Validate the changes through the project's pipeline.
+7	Coordinate the review	Ravi and the designated reviewer review the changes before the main-branch push.
 
-1. Scenario 3 – Concrete test data
 
-The current example values (X, XX, $xxx) appear to be placeholders. Could we replace them with concrete test data and the corresponding expected results so QA can validate the scenario consistently?
+What You Should Do First
+Your immediate priority is to split the existing prototype into two independent pages without changing the core functionality.
 
-2. Scenario 4 – Pending accounts and Accounts on File
+For example, your local development URLs could look like this:
+- Existing Client: http://localhost:3000/existing-client
+- New Client: http://localhost:3000/new-client
+These are example URLs; use the routing structure and port configured in your project.
 
-Please confirm whether accounts in the Pending state should be excluded from the Accounts on File count and whether their Pending status should be visible to the client on the landing page.
+Important: The team wants two independently accessible pages, not two tabs or two sections displayed within one combined dashboard.
 
-3. Scenario 5 – Legal entity count
-
-For a new client with no accounts, the scenario displays one legal entity. Please clarify how this count is derived and which hierarchy level is used. We should ensure the legal entity count remains consistent with the client hierarchy and the previously discussed Accounts on File rollup logic.
-
-4. Scenario 6 – Relationship-based data loading
-
-The statement “Depends on what is loaded for my relationship” is ambiguous. Please clarify what data should be loaded for the client relationship and identify the source of that data, such as the relevant database tables or backend service. This will help establish the expected landing-page behavior.
-
-5. Sprint and scope confirmation
-
-The Sprint field indicates Commercial OS Sprint 2, but the description does not explicitly reference the sprint. Please confirm whether this story is in scope for Sprint 2, considering the planned timeline of October 1–November 12 and dependencies on the other Deposit Console stories.
-
-Once these points are clarified, I will update the acceptance criteria accordingly and move the ticket out of Grooming for estimation.
-
-Before you post it
-Three details are worth keeping in mind:
-Do not present assumptions as confirmed requirements. Pending-account counting, legal entity derivation, and data sources still need confirmation from the relevant product or technical stakeholders.
-Keep the source of truth explicit. For Scenario 6, ask which service or database owns the relationship and account data rather than assuming a particular implementation.
-Confirm dependencies before committing scope. The Sprint 2 field alone does not establish that the story is ready or that all dependent Deposit Console stories will be completed in time.
-My recommendation: Post this version as a grooming clarification comment. It identifies the open questions without prematurely deciding the business logic or backend implementation.
+Once the separation is complete, run the pipeline and coordinate the review before pushing to the main branch.
