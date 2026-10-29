@@ -1,52 +1,19 @@
-1. Main Requirement: Split the Prototype into Two Separate Pages
-The team reviewed Rahul's existing prototype and requested that the current combined view be split into two completely separate pages.
+Develop and maintain the fabricui-commercial-os-dashboard-react project by converting Figma designs into React pages using the available Claude skills, existing project codebase, and BankingSuite Commercial Banking OS design system.
 
-Page 1: Existing Client
-- Display only the existing client dashboard.
-- Keep the existing client functionality and layout.
-- Include the required blue banner.
-- This should match the existing client demo shown yesterday.
-Page 2: New Client
-- Display only the new client landing page.
-- Keep the new client functionality separate from the existing client page.
-- Use a separate localhost URL to demonstrate this page independently.
-2. Navigation Requirements
-- Existing client and new client must be displayed on separate pages.
-- Both pages must not appear together on the same screen.
-- Users should not be able to navigate directly from one page to the other through the prototype's UI.
-- Each page should be accessible independently through its own localhost URL.
-3. Git and Deployment Process
-The team agreed that the changes can be pushed to the main branch after completion, following the agreed review and pipeline process.
+Objectives
 
-The expected steps are:
-1. Rahul separates the existing client and new client pages.
-2. Complete the required UI changes.
-3. Run the pipeline.
-4. Ravi and the other designated reviewer review the changes.
-5. After review and approval, push the changes to the main branch.
-4. Additional Discussion
-- The team confirmed that the new client landing page is already being developed.
-- The team had no further major comments on the proposed changes.
-- The new relationship banking/new client landing page work is progressing.
-✅ Action Items for Rahul
-#	Task	Expected Result
-1	Separate the existing client page	Only the existing client dashboard is displayed.
-2	Separate the new client page	Only the new client landing page is displayed.
-3	Add the blue banner	The required banner is present in the prototype.
-4	Configure separate localhost URLs	Each page can be demonstrated independently.
-5	Remove navigation between the two pages	Neither page provides a direct route to the other through the UI.
-6	Run the pipeline	Validate the changes through the project's pipeline.
-7	Coordinate the review	Ravi and the designated reviewer review the changes before the main-branch push.
+1. Inspect skills and codebase: Identify and read the relevant skills for Figma-to-React development, Fabric UI, code review, and test case generation. Understand the existing architecture, components, styling, routing, and testing framework before making changes.
+2. Implement Figma pages: Convert each requested Figma page into React, matching the design as closely as possible. Reuse existing Fabric UI components, shared components, design tokens, and established coding conventions.
+3. Review every page: After implementing each page, compare it against Figma, review code quality, verify interactions and responsive behavior, identify discrepancies, and fix issues before proceeding.
+4. Generate test cases for every page: Use the relevant testing skills to create page-specific test cases covering UI rendering, functionality, form validation, positive and negative scenarios, boundary conditions, component states, accessibility, and responsive behavior where applicable.
+5. Execute tests: Create and run automated tests using the existing testing framework where possible. Run relevant build and lint checks, resolve failures, and report actual results accurately. Provide manual test cases wherever automation is unavailable.
+6. Follow a strict workflow: For every page, inspect → implement → review → fix → generate test cases → execute applicable tests → document results. Do not skip review or test case generation for any page.
+7. Protect existing functionality: Follow project conventions, reuse existing components, avoid unnecessary changes to unrelated code, and do not invent business rules or backend behavior.
 
+Expected deliverables
 
-What You Should Do First
-Your immediate priority is to split the existing prototype into two independent pages without changing the core functionality.
+For every page, provide the implemented React files, a summary of functionality, review findings and fixes, page-specific test cases, automated test results, and any unresolved issues or blockers.
 
-For example, your local development URLs could look like this:
-- Existing Client: http://localhost:3000/existing-client
-- New Client: http://localhost:3000/new-client
-These are example URLs; use the routing structure and port configured in your project.
+Maintain a page-by-page completion report. A page is complete only when its implementation has been reviewed and its test cases have been generated. Clearly distinguish generated tests from tests that have actually been executed and passed.
 
-Important: The team wants two independently accessible pages, not two tabs or two sections displayed within one combined dashboard.
-
-Once the separation is complete, run the pipeline and coordinate the review before pushing to the main branch.
+Start by inspecting the available skills, Figma references, and existing repository. Then work through the pages one at a time, completing the review and testing workflow for each page before moving to the next.
